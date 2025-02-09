@@ -1,0 +1,74 @@
+# camera intrinsics
+width: 640  # Px
+height: 480 # Px
+vx: 320
+vy: 240
+fx: 580
+fy: 580
+
+# Static Transform
+pose_source: 1 # [0:tf_tree, 1:tf_topic, 2:odom_topic]
+invert_static_tf: True
+# Translation
+tx: 0.00114049
+ty: 0.0450936
+tz: 0.0430765
+# Rotation Quaternion
+x: 0.0924132
+y: 0.0976455
+z: 0.0702949
+w: 0.9884249
+
+# model transformation (switch axis)
+T_C_CH: [ 0.0, 0.0, 1.0, 0.0,
+         -1.0, 0.0, 0.0, 0.0,
+          0.0,-1.0, 0.0, 0.0,
+          0.0, 0.0, 0.0, 1.0]
+invert_T_C_CH: true
+
+# Transform
+use_tf_transforms: False
+tf_topic: "/kinect/vrpn_client/estimated_transform"
+timestamp_tolerance_ns: 1000000
+
+# PointCloud
+apply_pose: True
+downsample: False
+preprocess: True
+min_range: 0.1
+max_range: 8.0
+pcl_topic: "/camera/depth_registered/points"
+bag_start_time: 1473521338.62
+bag_end_time: 1473521481.40
+
+# TSDFMap
+use_multithread: False
+kf_interval: 3.0
+voxel_size: 0.05
+sdf_trunc: 0.1
+offset_x: 10.0
+offset_y: 10.0
+offset_z: 5.0
+tsdf_resize_factor: 5.0
+# Free Space Update
+space_carving: True
+enable_LRU: True
+# Local Update
+update_local: True
+update_range: 0.5
+
+# TSDF Visualization
+update_vis_every_n_sec: 3.0
+
+# Triangle Mesh Generation
+fill_holes: True
+min_weight: 10.0
+
+# ESDF Map
+updateESDF: True
+update_esdf_every_n_sec: 1
+slice_vis_level: 6.0
+
+# Visualization
+vis_min_range: 0.1
+vis_max_range: 6.0

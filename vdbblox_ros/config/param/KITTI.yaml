@@ -1,0 +1,64 @@
+# Transformation
+pose_source: 0 # [0:tf_tree, 1:tf_topic, 2:odom_topic]
+child_frame: "velo_link"
+world_frame: "world"
+
+# Static Transform
+invert_static_tf: True
+# Translation
+tx: 0
+ty: 0
+tz: 0
+# Rotation Quaternion
+x: 0
+y: 0
+z: 0
+w: 1
+
+# PointCloud
+pcl_topic: "/kitti/velo/pointcloud"
+apply_pose: True
+downsample: False
+preprocess: True
+min_range: 2.0
+max_range: 70.0
+# bag_start_time: 1625132069.16
+# bag_end_time: 1625132267.64
+
+# TSDFMap
+use_multithread: False
+kf_interval: 5.0
+voxel_size: 0.05
+sdf_trunc: 0.10
+offset_x: 10.0
+offset_y: 100.0
+offset_z: 100.0
+tsdf_resize_factor: 5.0
+# Free Space Update
+space_carving: False
+enable_LRU: True
+# Local Update
+update_local: True
+update_range: 0.5
+
+# TSDF Visualization
+# update_vis_every_n_sec: 3.0
+
+# Triangle Mesh Generation
+fill_holes: True
+min_weight: 10.0
+
+# ESDF Map
+updateESDF: False
+update_esdf_every_n_sec: 1
+slice_vis_level: 6.0
+
+# Visualization
+vis_min_range: 0.1
+vis_max_range: 6.0
+# model transformation (switch axis)
+T_C_CH: [ 0.0, 0.0, 1.0, 0.0,
+         -1.0, 0.0, 0.0, 0.0,
+          0.0,-1.0, 0.0, 0.0,
+          0.0, 0.0, 0.0, 1.0]
+invert_T_C_CH: true

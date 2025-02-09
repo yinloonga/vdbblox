@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "name": "vdbblox",
+            "path": "."
+        },
+
+    ],
+    "settings": {
+        "python.autoComplete.extraPaths": [
+            "/opt/ros/noetic/lib/python3/dist-packages"
+        ],
+        "python.analysis.extraPaths": [
+            "/opt/ros/noetic/lib/python3/dist-packages"
+        ],
+        "ros.distro": "noetic",
+    }
+}

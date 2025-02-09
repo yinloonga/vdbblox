@@ -1,0 +1,5 @@
+<launch>
+  <arg name="config_file_name"/>
+  <rosparam file="$(find vdbblox_ros)/config/param/$(arg config_file_name)" />
+  <node name="vdbblox" pkg="vdbblox_ros" type="vdbblox_ros_node" output="screen"/>
+</launch>

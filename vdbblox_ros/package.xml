@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>vdbblox_ros</name>
+  <version>0.0.0</version>
+  <description>ROS wrappper for the vdbblox library</description>
+
+  <maintainer email="yinlonga@gmail.com">Yinlong Bai</maintainer>
+  <author email="yinlonga@gmail.com">Yinlong Bai</author>
+  <license>GPL3.0</license>
+
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf</depend>
+  <depend>tf_conversions</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_sensor_msgs</depend>
+
+</package>

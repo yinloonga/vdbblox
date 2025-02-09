@@ -1,0 +1,6 @@
+<launch>
+
+    <node name="keyboard_control" pkg="vdbblox_ros" type="keyboard_control.py" output="screen">
+
+    </node>
+</launch>
